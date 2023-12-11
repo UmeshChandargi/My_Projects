@@ -1,0 +1,6 @@
+Message Header Type: STRING
+Message Header Severity: TRACE
+Payload Length: 2
+Payload 0 : B
+Payload 1 : A
+LRC verified
