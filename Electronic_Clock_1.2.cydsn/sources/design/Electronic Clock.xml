@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rte>
+ <configset>
+  <config name="version" value="Erika 2"/>
+  <config name="path_out" value="{PROJECT_PATH}\out"/>
+  <config name="templateDir" value="{GEN_PATH}\..\templates\erika"/>
+  <config name="userCodeStart" value="/\* USER CODE START {TAG} \*/"/>
+  <config name="userCodeEnd" value="/\* USER CODE END {TAG} \*/"/>
+  <config name="guivers" value="0.1.2"/>
+ </configset>
+ <naming>
+  <config name="signalpoolPrefix" value="sp_"/>
+  <config name="signalpoolPostfix" value=""/>
+  <config name="taskPrefix" value="tsk_"/>
+  <config name="taskPostfix" value=""/>
+  <config name="signalclassPrefix" value="sc_"/>
+  <config name="signalclassPostfix" value=""/>
+  <config name="signalobjectPrefix" value="so_"/>
+  <config name="signalobjectPostfix" value=""/>
+  <config name="swcPrefix" value="swc_"/>
+  <config name="swcPostfix" value=""/>
+  <config name="runnablePrefix" value=""/>
+  <config name="runnablePostfix" value="_run"/>
+  <config name="eventPrefix" value="ev_"/>
+  <config name="eventPostfix" value=""/>
+  <config name="resourcePrefix" value="res_"/>
+  <config name="resourcePostfix" value=""/>
+  <config name="addrPrefix" value="ADR_"/>
+  <config name="addrStartPostfix" value="_START"/>
+  <config name="addrEndPostfix" value="_END"/>
+ </naming>
+ <signalpools>
+  <signalpool description="The common global signal pool. All signals will be stored here" endaddr="ADR_SP_COMMON_END" name="sp_common" shortname="common" startaddr="ADR_SP_COMMON_START"/>
+ </signalpools>
+ <tasks>
+  <task description="This task will contain all Realtime operations, eg. run_ClockControl, run_ClockInput" events="ev_1ms|ev_Button_OnData" mode="Cyclic and Event" name="tsk_realtime" shortname="realtime" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="ev_1ms" timertickperiod="1"/>
+  <task description="Task for TFT display long runnable" events="" mode="Cyclic" name="tsk_hmi" shortname="hmi" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="0" timertickperiod="1"/>
+  <task description="specific task for age increment  " events="" mode="Cyclic" name="tsk_system" shortname="system" signalpoolsRO="sp_common" signalpoolsRW="sp_common" tickEvent="0" timertickperiod="1"/>
+ </tasks>
+ <signalclasses>
+  <signalclass description="Signalclass for event leftbutton short press and right button short/long press" name="sc_ButtonEvent" shortname="ButtonEvent"/>
+  <signalclass description="Signalclass for output data from the control runnable. Which consists of the data of min and hour widget " name="sc_ControlOut" shortname="ControlOut"/>
+  <signalclass description="Signalclass for TFT commands type" name="sc_Display" shortname="Display"/>
+ </signalclasses>
+ <signalobjects>
+  <signalobject description="A Signal for event leftbutton short press and right button short/long press" indriver="default" name="so_ButtonEvent" onDataError="0" onDataUpdate="ev_Button_OnData" outdriver="0" resource="None" shortname="ButtonEvent" signalclass="sc_ButtonEvent" signalpool="sp_common"/>
+  <signalobject description="Sognal For output data from the control runnable. Which consists of the data of min and hour widget " indriver="0" name="so_ControlOut" onDataError="0" onDataUpdate="0" outdriver="0" resource="None" shortname="ControlOut" signalclass="sc_ControlOut" signalpool="sp_common"/>
+  <signalobject description="A Signal for TFT commands type" indriver="0" name="so_Display" onDataError="0" onDataUpdate="0" outdriver="default" resource="None" shortname="Display" signalclass="sc_Display" signalpool="sp_common"/>
+ </signalobjects>
+ <swcs>
+  <swc description="Software component for Button input and send events for leftbutton short press and right button short/long press" name="swc_Input" shortname="Input"/>
+  <swc description="Software component for Statemachine logic and send data on min and hour widgets" name="swc_Control" shortname="Control"/>
+  <swc description="Software component for TFT data display" name="swc_Display" shortname="Display"/>
+  <swc description="Software component" name="swc_System" shortname="System"/>
+ </swcs>
+ <runnables>
+  <runnable component="swc_Input" cycletime="50" description="Runnable for Button input and send events for leftbutton short press and right button short/long press" events="" name="INPUT_Clock_input_run" shortname="Clock_input" signalIN="" signalOUT="so_ButtonEvent" task="tsk_realtime"/>
+  <runnable component="swc_Control" cycletime="0" description="Runnable for Statemachine logic and send data on min and hour widgets" events="ev_Button_OnData" name="CONTROL_Clock_control_run" shortname="Clock_control" signalIN="so_ButtonEvent" signalOUT="so_ControlOut" task="tsk_realtime"/>
+  <runnable component="swc_Display" cycletime="250" description="Runnable for TFT data display" events="" name="DISPLAY_Clock_display_run" shortname="Clock_display" signalIN="so_ControlOut" signalOUT="so_Display" task="tsk_hmi"/>
+  <runnable component="swc_System" cycletime="1" description="Runnable for incrementing age of all signals. This is done for debugging and diagnosis of the signals" events="" name="SYSTEM_incAge_run" shortname="incAge" signalIN="so_ButtonEvent|so_ControlOut|so_Display" signalOUT="so_ButtonEvent|so_ControlOut|so_Display" task="tsk_system"/>
+ </runnables>
+ <events>
+  <event description="cyclic tick event" name="ev_1ms" shortname="1ms"/>
+  <event description="This event will be recieved for leftbutton short press and right button short/long press" name="ev_Button_OnData" shortname="Button_OnData"/>
+ </events>
+ <resources/>
+</rte>

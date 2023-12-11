@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HtermSequenceFile name="Hterm Sequence File" version="0.8.9">
+  <ItemList>
+    <SequenceItem name="Simple">
+      <sequence value="a[{ &quot;name&quot; : &quot;Jack&quot;, &quot;age&quot; : 27 }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="Nested">
+      <sequence value="a[{ &quot;person&quot; : { &quot;name&quot; : &quot;Jack&quot;, &quot;age&quot; : 27 } }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="Array">
+      <sequence value="a[{ &quot;array&quot; : [1, 2, 3\], &quot;coordinate&quot; : [1, 2\] }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="Draw">
+      <sequence value="a[{ &quot;c&quot; : &quot;red&quot; &quot;d&quot; : [10, 10, 10, 100\], &quot;d&quot; : [10, 100, 100, 100\], &quot;d&quot; : [100, 100, 100, 10\], &quot;d&quot; : [100, 10, 10, 10 \] }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="it4_drawcordinates">
+      <sequence value="a[{&quot;d&quot; : [10, 10, 10, 100\]}] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="it4_color">
+      <sequence value="a[{ &quot;c&quot; : &quot;red&quot;}] h[0]"/>
+      <description></description>
+    </SequenceItem>
+  </ItemList>
+</HtermSequenceFile>

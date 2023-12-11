@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HtermSequenceFile name="Hterm Sequence File" version="0.8.9">
+  <ItemList>
+    <SequenceItem name="JSON string1">
+      <sequence value="a[{ &quot;name&quot; : &quot;Jack&quot;, &quot;age&quot; : 27 }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="JSON string2">
+      <sequence value="a[{ &quot;person&quot; : { &quot;name&quot; : &quot;Jack&quot;, &quot;age&quot; : 27 } }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="JSON string3">
+      <sequence value="a[{ &quot;array&quot; : [1, 2, 3\], &quot;coordinate&quot; : [1, 2\] }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+    <SequenceItem name="JSON string4">
+      <sequence value="a[{ &quot;coordinate&quot; : { &quot;x&quot; : 3, &quot;y&quot; : 4} }] h[0]"/>
+      <description></description>
+    </SequenceItem>
+  </ItemList>
+</HtermSequenceFile>

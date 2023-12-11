@@ -1,0 +1,87 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/simulation/modelsim
+vsha1_Implimentation
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+DXx4 work 25 state_machine_definitions 0 22 m=Q59k?YaQHR;7lca]M`60
+Z2 !s110 1676327710
+!i10b 1
+!s100 F8Q2cj@?z9c2@gR=AbM3Q0
+I5Iz4lOLYV_GKCLf2AQQW63
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 sha1_Implimentation_sv_unit
+S1
+R0
+Z4 w1676327499
+Z5 8C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation.sv
+Z6 FC:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation.sv
+L0 9
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1676327710.000000
+Z9 !s107 C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation.sv|
+Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation|C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation.sv|
+!i113 1
+Z11 o-sv -work work
+Z12 !s92 -sv -work work +incdir+C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation
+Z13 tCvgOpt 0
+nsha1_@implimentation
+vsha1_Implimentation_tb
+R1
+R2
+!i10b 1
+!s100 cU3;2KDS@>0`O_;d6AX8g2
+Ikehz>i8e]nT=3dCT9E7EZ0
+R3
+!s105 sha1_Implimentation_tb_sv_unit
+S1
+R0
+R4
+8C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation_tb.sv
+FC:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation_tb.sv
+L0 9
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation|C:/my_folder/assignments/fsoc/Lab_assignment3/sha1_Implimentation_Lab3/sha1_Implimentation/sha1_Implimentation_tb.sv|
+!i113 1
+R11
+R12
+R13
+nsha1_@implimentation_tb
+Xstate_machine_definitions
+R1
+R2
+!i10b 1
+!s100 2bR1ib503`0XhNL?HLQ_T0
+Im=Q59k?YaQHR;7lca]M`60
+Vm=Q59k?YaQHR;7lca]M`60
+S1
+R0
+R4
+R5
+R6
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+R13
